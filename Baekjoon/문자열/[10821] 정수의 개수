@@ -1,0 +1,14 @@
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Collections;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();    // 입력 받은 문자열
+        String []word=str.split(",");
+        
+        System.out.println(word.length);
+    }
+}
