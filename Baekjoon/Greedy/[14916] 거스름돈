@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args){
+       Scanner sc=new Scanner(System.in);
+    
+        int money=sc.nextInt();
+        
+        int a=money%5;
+        
+        if(money==1 || money==3){
+            System.out.println(-1);
+        }else if(a%2==0){
+            int b=money/5+a/2;
+            System.out.println(b);
+        }else{
+            int c=((money/5)-1)+(a+5)/2;
+            System.out.println(c);
+        }
+        
+    }
+}
