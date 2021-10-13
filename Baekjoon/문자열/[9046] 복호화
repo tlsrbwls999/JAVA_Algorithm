@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args){
+       Scanner sc=new Scanner(System.in);
+        
+        int n=sc.nextInt();
+        sc.nextLine();
+                
+        for(int i=0;i<n;i++){
+            String word=sc.nextLine();
+            int[]arr=new int[26];
+            for (int j=0;j<word.length();j++){
+                char c=word.charAt(j);
+                if (c!=' '){
+                    arr[c-'a']++;
+                }
+            }
+            
+            int max=0;
+            int ans=0;
+            int cnt=0;
+            for(int s:arr){
+                if(s>max){
+                    max=s;
+                }
+            }
+            
+            for(int k=0;k<26;k++){
+                if (arr[k]==max){
+                    cnt+=1;
+                    ans=k;
+                }
+            }
+            if(cnt>1){
+                System.out.println("?");
+            }else{
+                System.out.println((char)(ans+'a'));
+            }
+            
+            
+        }
+      
+    }
+}
