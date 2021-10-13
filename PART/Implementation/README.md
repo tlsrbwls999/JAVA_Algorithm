@@ -15,8 +15,8 @@
 ***❗️❗️꼭 문제를 순서대로 안풀어도 됩니다.❗️❗️***
 
 [백준 문제집](https://www.acmicpc.net/workbook/view/6783)
-|          순번          |        추천 문제         |        문제 번호         |        문제 이름         |         난이도          |        풀이 링크         |
-| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
+|          순번          |        추천 문제         |        문제 번호         |        문제 이름         |         난이도          |        풀이 링크         | 해결 완료 |
+| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | 00 |  :heavy_check_mark:  | <a href="https://www.acmicpc.net/problem/21608" target="_blank">21608</a> | <a href="https://www.acmicpc.net/problem/21608" target="_blank">상어 초등학교</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | <a href="./../solution/implementation/21608">바로가기</a> |
 | 01 |  :heavy_check_mark:  | <a href="https://www.acmicpc.net/problem/21611" target="_blank">21611</a> | <a href="https://www.acmicpc.net/problem/21611" target="_blank">마법사 상어와 블리자드</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> |                      |
 | 02 |  :heavy_check_mark:  | <a href="https://www.acmicpc.net/problem/2753" target="_blank">2753</a> | <a href="https://www.acmicpc.net/problem/2753" target="_blank">윤년</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/2.svg"/> | <a href="./../solution/implementation/2753">바로가기</a> |
@@ -48,7 +48,7 @@
 | 28 |  :heavy_check_mark:  | <a href="https://www.acmicpc.net/problem/22860" target="_blank">22860</a> | <a href="https://www.acmicpc.net/problem/22860" target="_blank">폴더 정리 (small)</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |                      |
 | 29 |  :heavy_check_mark:  | <a href="https://www.acmicpc.net/problem/22859" target="_blank">22859</a> | <a href="https://www.acmicpc.net/problem/22859" target="_blank">HTML 파싱</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |                      |
 | 30 |                      | <a href="https://www.acmicpc.net/problem/21756" target="_blank">21756</a> | <a href="https://www.acmicpc.net/problem/21756" target="_blank">지우개</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | <a href="./../solution/implementation/21756">바로가기</a> |
-| 31 |                      | <a href="https://www.acmicpc.net/problem/1316" target="_blank">1316</a> | <a href="https://www.acmicpc.net/problem/1316" target="_blank">그룹 단어 체커</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> |                      |
+| 31 |                      | <a href="https://www.acmicpc.net/problem/1316" target="_blank">1316</a> | <a href="https://www.acmicpc.net/problem/1316" target="_blank">그룹 단어 체커</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> |                      | :heavy_check_mark:
 | 32 |                      | <a href="https://www.acmicpc.net/problem/18311" target="_blank">18311</a> | <a href="https://www.acmicpc.net/problem/18311" target="_blank">왕복</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> |                      |
 | 33 |                      | <a href="https://www.acmicpc.net/problem/5766" target="_blank">5766</a> | <a href="https://www.acmicpc.net/problem/5766" target="_blank">할아버지는 유명해!</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> |                      |
 | 34 |                      | <a href="https://www.acmicpc.net/problem/2729" target="_blank">2729</a> | <a href="https://www.acmicpc.net/problem/2729" target="_blank">이진수 덧셈</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | <a href="./../solution/implementation/2729">바로가기</a> |
