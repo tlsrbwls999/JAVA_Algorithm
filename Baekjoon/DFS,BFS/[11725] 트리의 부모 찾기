@@ -1,0 +1,98 @@
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+    static int[][] check;
+    static boolean[] checked;
+    static int n;
+    static int m;
+    static int[] result;
+    
+    public static void main(String[] args) throws IOException{
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        
+        check=new int[n+1][n+1];
+        checked=new boolean[n+1];
+        result=new int [n+1];
+        
+        for(int i=0;i<n-1;i++){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            check[a][b]=check[b][a]=1;
+        }
+        
+        
+        bfs();
+        for(int i=2;i<=n;i++){
+            System.out.println(result[i]);
+        }
+        
+    }
+    
+    public static void bfs(){
+        Queue<Integer>queue=new LinkedList<>();
+        queue.offer(1);
+        checked[1]=true;
+        
+        while(!queue.isEmpty()){
+            int temp=queue.poll();
+            for(int i=1;i<=n;i++){
+                if(check[temp][i]==1 &&checked[i]==false){
+                    queue.offer(i);
+                    result[i]=temp;
+                    checked[i]=true;
+                }
+            }
+        }    
+    }
+}
+
+//100000의 범위 에서는 메모리 초과가 발생
+//인접행렬이 아닌 인접리스트를 사용해야한다
+
+import java.util.*;
+import java.io.*;
+
+
+public class Main {
+    static boolean[] checked;
+    static int n;
+    static int[] result;
+    
+    public static void main(String[] args) throws IOException{
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        
+        result=new int [n+1];
+        List<List<Integer>>map=new ArrayList<>();
+        for(int i=0;i<=n;i++) map.add(new ArrayList<>());
+        for(int i=0;i<n-1;i++){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            map.get(a).add(b);
+            map.get(b).add(a);
+        }
+        Queue<Integer>q=new LinkedList<>();
+        q.add(1);
+        result[1]=-1;
+        while(!q.isEmpty()){
+            int temp=q.poll();
+            for(int child:map.get(temp)){
+                if(result[child]==0){
+                    q.add(child);
+                    result[child]=temp;
+                }
+            }
+        }
+        for(int j=2;j<=n;j++){
+            System.out.println(result[j]);
+        }
+        
+        
+        }
+        
+    }
+  
+//인접리스트로 해결 가능
