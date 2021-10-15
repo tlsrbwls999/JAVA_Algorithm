@@ -62,3 +62,69 @@ public class Main {
 }
 
 //답은 잘 나오는데 메모리 초과 발생.. 큐를 두개만들어서 그런듯...?
+
+
+import java.util.*;
+import java.io.*;
+
+
+public class Main {
+    static boolean[][] checked;
+    static int n;
+    static int m;
+    
+    
+    public static void main(String[] args) throws IOException{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        
+        int[] dx={-1,1,0,0};
+        int[] dy={0,0,-1,1};
+        
+        n=Integer.parseInt(st.nextToken());
+        m=Integer.parseInt(st.nextToken());
+        
+        List<List<Integer>>list=new ArrayList<>();
+        int [][] result=new int[n][m];
+        checked=new boolean[n][m];
+        
+        for(int i=0;i<n;i++) list.add(new ArrayList<>());
+        
+        for(int i=0;i<n;i++){
+            st=new StringTokenizer(br.readLine());
+            String str=st.nextToken();
+            for(int j=0;j<m;j++){
+                list.get(i).add(str.charAt(j)-'0');
+            }
+        }
+        
+        Queue<int[]>pos=new LinkedList<>();
+        pos.add(new int[]{0,0});
+        while(!pos.isEmpty()){
+            int now[]=pos.poll();
+            int x=now[0];
+            int y=now[1];
+            if(x==n-1 &&y==m-1){
+                System.out.println(result[x][y]+1);
+                System.exit(0);
+            }
+            for(int i=0;i<4;i++){
+                int nx=x+dx[i];
+                int ny=y+dy[i];
+                if(nx<0||ny<0||nx>n-1||ny>m-1){
+                    continue;
+                }
+                if(checked[nx][ny]==false &&list.get(nx).get(ny)==1){
+                    pos.add(new int[]{nx,ny});
+                    checked[nx][ny]=true;
+                    result[nx][ny]=result[x][y]+1;
+                }  
+            }
+        }
+        
+        
+    }
+        
+}
+
+//방문 체크만 위치를 바꿨을 뿐인데 통과..
