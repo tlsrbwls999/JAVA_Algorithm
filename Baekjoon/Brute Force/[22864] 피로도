@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+
+
+public class Main {
+    
+    
+    public static void main(String[] args) throws IOException{
+        Scanner sc=new Scanner(System.in);
+        
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        int m=sc.nextInt();
+        sc.nextLine();
+        
+        int tired=0;
+        int work=0;
+        int time=0;
+        
+        if(a>m){
+            System.out.println(0);
+            System.exit(0);
+        }
+        while(true){
+            tired+=a;
+            if(tired>m){
+                tired-=a;
+                tired-=c;
+            }else{
+                work+=b;
+            }
+            time+=1;
+            
+            if(time==24){
+                System.out.println(work);
+                System.exit(0);
+            }
+            
+        }
+        
+    }
+        
+}
