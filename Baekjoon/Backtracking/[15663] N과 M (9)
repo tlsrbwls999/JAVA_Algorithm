@@ -1,0 +1,52 @@
+import java.util.*;
+import java.io.*;
+
+
+public class Main {
+    
+    static int[] arr;
+    static int[]result;
+    static boolean[] check;
+    static int n;
+    static int m;
+    public static StringBuilder sb=new StringBuilder();
+    
+    public static void main(String[] args) throws IOException{
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        m=sc.nextInt();
+        
+        arr=new int[n];
+        result=new int[n];
+        check=new boolean[n];
+        
+        for(int i=0;i<n;i++){
+            result[i]=sc.nextInt();
+        }
+        
+        Arrays.sort(result);
+        dfs(0);
+        System.out.print(sb);
+    }
+    
+    public static void dfs(int depth){
+        if (depth==m){
+            for(int i=0;i<m;i++){
+                sb.append(arr[i]+" ");
+            }
+            sb.append("\n");
+            return;
+        }
+        int last=0;
+        for(int j=0;j<n;j++){
+            if(!check[j]&&last!=result[j]){
+                check[j]=true;
+                last=result[j];
+                arr[depth]=result[j];
+                dfs(depth+1);
+                check[j]=false;
+            }
+        }
+    }
+       
+}
