@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+
+
+public class Main {
+       
+    public static void main(String[] args) throws IOException{
+          
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        Queue<Integer>q=new LinkedList<>();
+        
+        for(int i=1;i<=n;i++){
+            q.offer(i);
+        }
+        
+        while(q.size()>1){
+            int num=q.poll();
+            if(q.size()==1){
+                break;
+            }
+            int num2=q.poll();
+            q.offer(num2);
+        }
+        System.out.println(q.peek());
+        
+    }
+       
+}
