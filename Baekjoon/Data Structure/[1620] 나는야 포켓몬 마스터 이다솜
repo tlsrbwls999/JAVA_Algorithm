@@ -1,0 +1,46 @@
+import java.util.*;
+import java.io.*;
+
+public class Coding_test {
+
+    public static boolean chkval(String val){
+        try{
+            Double.parseDouble(val);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        Map<String,Integer>map=new HashMap<>();
+        int num=1;
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        sc.nextLine();
+        String name[]=new String[n+1];
+
+        for(int i=0;i<n;i++){
+            String str=sc.nextLine();
+            map.put(str,num);
+            name[num]=str;
+            num+=1;
+        }
+
+        for(int j=0;j<m;j++){
+            String s=sc.nextLine();
+            if(chkval(s)){ //숫자!
+                int index=Integer.parseInt(s);
+                System.out.println(name[index]);
+            }else{
+                System.out.println(map.get(s));
+
+            }
+        }
+        sc.close();
+    }
+
+
+}
