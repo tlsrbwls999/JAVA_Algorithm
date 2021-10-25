@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+
+public class Coding_test {
+
+    public static void main(String[] args) throws IOException{
+//        Scanner sc=new Scanner(System.in);
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<String>arr=new ArrayList<>();
+
+        int answer=0;
+
+        String num=br.readLine();
+        StringTokenizer st=new StringTokenizer(num);
+        int n=Integer.parseInt(st.nextToken());
+        int m=Integer.parseInt(st.nextToken());
+
+        for(int i=0;i<n;i++){
+            String str=br.readLine();
+            arr.add(str);
+        }
+        for(int j=0;j<m;j++){
+            String tmp=br.readLine();
+            if(arr.contains(tmp)){
+                answer+=1;
+            }
+        }
+        System.out.println(answer);
+    }
+
+}
