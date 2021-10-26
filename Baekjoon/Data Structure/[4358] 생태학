@@ -1,0 +1,35 @@
+import java.util.*;
+import java.io.*;
+
+public class Coding_test {
+
+    public static void main(String[] args) throws IOException{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        //Scanner sc=new Scanner(System.in);
+        Map<String,Integer>map=new HashMap<>();
+
+        int num=0;
+
+        while(true){
+            String str=br.readLine();
+            if(str==null||str.equals("")){
+                break;
+            }
+            num+=1;
+            if(map.containsKey(str)){
+                map.put(str,map.get(str)+1);
+            }else{
+                map.put(str,1);
+            }
+        }
+
+        Object[]key=map.keySet().toArray();
+        Arrays.sort(key);
+
+        for(int i=0;i<key.length;i++){
+            int value=map.get(key[i]);
+            double result=((double)value/num)*100;
+            System.out.println(key[i]+" "+String.format("%.4f",result));
+        }
+    }
+}
